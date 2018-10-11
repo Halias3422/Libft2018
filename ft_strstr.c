@@ -6,7 +6,7 @@
 /*   By: vde-sain <marvin@le-101.fr>                +:+   +:    +:    +:+     */
 /*                                                 #+#   #+    #+    #+#      */
 /*   Created: 2018/10/05 18:02:53 by vde-sain     #+#   ##    ##    #+#       */
-/*   Updated: 2018/10/08 12:48:40 by vde-sain    ###    #+. /#+    ###.fr     */
+/*   Updated: 2018/10/11 12:05:04 by vde-sain    ###    #+. /#+    ###.fr     */
 /*                                                         /                  */
 /*                                                        /                   */
 /* ************************************************************************** */
@@ -31,7 +31,7 @@ char	*ft_strstr(const char *haystack, const char *needle)
 		}
 		if (needle[b] == '\0')
 			return ((char *)&haystack[a - b]);
-		else if (needle[b] != '\0' && needle[b] > 0)
+		else if (needle[b] != '\0' && b > 0)
 		{
 			a = a - (b - 1);
 			b = 0;

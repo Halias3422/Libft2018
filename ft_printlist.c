@@ -1,28 +1,40 @@
 /* ************************************************************************** */
 /*                                                          LE - /            */
 /*                                                              /             */
-/*   ft_strrchr.c                                     .::    .:/ .      .::   */
+/*   ft_printlist.c                                   .::    .:/ .      .::   */
 /*                                                 +:+:+   +:    +:  +:+:+    */
 /*   By: vde-sain <marvin@le-101.fr>                +:+   +:    +:    +:+     */
 /*                                                 #+#   #+    #+    #+#      */
-/*   Created: 2018/10/08 14:38:31 by vde-sain     #+#   ##    ##    #+#       */
-/*   Updated: 2018/10/10 17:17:42 by vde-sain    ###    #+. /#+    ###.fr     */
+/*   Created: 2018/10/11 15:51:49 by vde-sain     #+#   ##    ##    #+#       */
+/*   Updated: 2018/10/11 17:11:25 by vde-sain    ###    #+. /#+    ###.fr     */
 /*                                                         /                  */
 /*                                                        /                   */
 /* ************************************************************************** */
 
 #include "libft.h"
+#include <stdio.h>
 
-char		*ft_strrchr(const char *s, int c)
+void		ft_printlist(t_list *lst)
 {
-	int		a;
-
-	a = ft_strlen(s);
-	if (a == 0)
-		return (NULL);
-	while (s[a] != (char)c && a >= 0)
-		a--;
-	if (a == -1 && s[1] != (char)c)
-		return (NULL);
-	return ((char*)&s[a]);
+	if (lst)
+	{
+		while (lst != NULL)
+		{
+			ft_putstr((char*)lst->content);
+			lst = lst->next;
+		}
+	}
 }
+
+/*int		main(void)
+{
+	t_list *new;
+
+	new = ft_lstnew("bonjour", 30);
+	printf("new=%s", (char*)new->content);
+	new->next = "aurevoir";
+	printf("new=%s", (char*)new->content);
+	new->next = ft_lstnew("ntm", 5);
+	printf("new=%s", (char*)new->content);
+	ft_printlist(new);
+}*/

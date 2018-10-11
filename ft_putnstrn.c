@@ -1,28 +1,26 @@
 /* ************************************************************************** */
 /*                                                          LE - /            */
 /*                                                              /             */
-/*   ft_strrchr.c                                     .::    .:/ .      .::   */
+/*   ft_putnstrn.c                                    .::    .:/ .      .::   */
 /*                                                 +:+:+   +:    +:  +:+:+    */
 /*   By: vde-sain <marvin@le-101.fr>                +:+   +:    +:    +:+     */
 /*                                                 #+#   #+    #+    #+#      */
-/*   Created: 2018/10/08 14:38:31 by vde-sain     #+#   ##    ##    #+#       */
-/*   Updated: 2018/10/10 17:17:42 by vde-sain    ###    #+. /#+    ###.fr     */
+/*   Created: 2018/10/11 15:47:10 by vde-sain     #+#   ##    ##    #+#       */
+/*   Updated: 2018/10/11 17:28:52 by vde-sain    ###    #+. /#+    ###.fr     */
 /*                                                         /                  */
 /*                                                        /                   */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-char		*ft_strrchr(const char *s, int c)
+void		ft_putnstrn(char *str, int n1, int n2)
 {
 	int		a;
 
-	a = ft_strlen(s);
-	if (a == 0)
-		return (NULL);
-	while (s[a] != (char)c && a >= 0)
-		a--;
-	if (a == -1 && s[1] != (char)c)
-		return (NULL);
-	return ((char*)&s[a]);
+	if (str)
+	{
+		a = n1;
+		while (a < n2 && str[a])
+			ft_putchar(str[a++]);
+	}
 }

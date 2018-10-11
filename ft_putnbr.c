@@ -6,14 +6,12 @@
 /*   By: vde-sain <marvin@le-101.fr>                +:+   +:    +:    +:+     */
 /*                                                 #+#   #+    #+    #+#      */
 /*   Created: 2018/10/04 13:09:00 by vde-sain     #+#   ##    ##    #+#       */
-/*   Updated: 2018/10/04 14:45:46 by vde-sain    ###    #+. /#+    ###.fr     */
+/*   Updated: 2018/10/10 16:48:48 by vde-sain    ###    #+. /#+    ###.fr     */
 /*                                                         /                  */
 /*                                                        /                   */
 /* ************************************************************************** */
 
 #include "libft.h"
-
-void	ft_putchar(char c);
 
 void	ft_putnbr(int n)
 {

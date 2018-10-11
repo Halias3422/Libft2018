@@ -6,7 +6,7 @@
 /*   By: vde-sain <marvin@le-101.fr>                +:+   +:    +:    +:+     */
 /*                                                 #+#   #+    #+    #+#      */
 /*   Created: 2018/10/03 18:44:17 by vde-sain     #+#   ##    ##    #+#       */
-/*   Updated: 2018/10/04 14:46:06 by vde-sain    ###    #+. /#+    ###.fr     */
+/*   Updated: 2018/10/11 11:22:14 by vde-sain    ###    #+. /#+    ###.fr     */
 /*                                                         /                  */
 /*                                                        /                   */
 /* ************************************************************************** */
@@ -20,11 +20,9 @@ char	*ft_strcpy(char *dst, const char *src)
 	b = 0;
 	while (src[b])
 	{
-		if (dst[b] == '\0')
-			return (NULL);
 		dst[b] = src[b];
 		b++;
 	}
-	dst[b] = src[b];
+	dst[b] = '\0';
 	return (dst);
 }

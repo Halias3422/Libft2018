@@ -6,18 +6,18 @@
 /*   By: vde-sain <marvin@le-101.fr>                +:+   +:    +:    +:+     */
 /*                                                 #+#   #+    #+    #+#      */
 /*   Created: 2018/10/04 11:04:04 by vde-sain     #+#   ##    ##    #+#       */
-/*   Updated: 2018/10/09 13:12:29 by vde-sain    ###    #+. /#+    ###.fr     */
+/*   Updated: 2018/10/11 15:33:33 by vde-sain    ###    #+. /#+    ###.fr     */
 /*                                                         /                  */
 /*                                                        /                   */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int		ft_atoi(const char *str)
+int						ft_atoi(const char *str)
 {
-	int		i;
-	long	nb;
-	int		neg;
+	int					i;
+	unsigned long long	nb;
+	int					neg;
 
 	i = 0;
 	nb = 0;
@@ -31,10 +31,11 @@ int		ft_atoi(const char *str)
 		i++;
 	}
 	while (str[i] >= '0' && str[i] <= '9')
-	{
-		nb = (nb * 10) + (str[i] - 48);
-		i++;
-	}
+		nb = (nb * 10) + (str[i++] - 48);
+	if (nb > 9223372036854775807 && neg == 1)
+		return (0);
+	else if (nb > 9223372036854775807 && neg == 0)
+		return (-1);
 	if (neg == 1)
 		nb = -nb;
 	return (nb);
