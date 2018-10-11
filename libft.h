@@ -6,7 +6,7 @@
 /*   By: vde-sain <marvin@le-101.fr>                +:+   +:    +:    +:+     */
 /*                                                 #+#   #+    #+    #+#      */
 /*   Created: 2018/10/03 17:33:24 by vde-sain     #+#   ##    ##    #+#       */
-/*   Updated: 2018/10/11 17:27:15 by vde-sain    ###    #+. /#+    ###.fr     */
+/*   Updated: 2018/10/11 17:54:30 by vde-sain    ###    #+. /#+    ###.fr     */
 /*                                                         /                  */
 /*                                                        /                   */
 /* ************************************************************************** */
@@ -109,5 +109,6 @@ void				ft_putnstrn(char *str, int n1, int n2);
 char				*ft_strndup(const char *s1, size_t n);
 int					ft_isblank(int c);
 int					ft_isupper(int c);
+t_list				*ft_list_last(t_list *lst);
 
 #endif
