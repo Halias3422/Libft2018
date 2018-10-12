@@ -6,7 +6,7 @@
 /*   By: vde-sain <marvin@le-101.fr>                +:+   +:    +:    +:+     */
 /*                                                 #+#   #+    #+    #+#      */
 /*   Created: 2018/10/05 10:01:44 by vde-sain     #+#   ##    ##    #+#       */
-/*   Updated: 2018/10/09 15:33:53 by vde-sain    ###    #+. /#+    ###.fr     */
+/*   Updated: 2018/10/12 13:12:09 by vde-sain    ###    #+. /#+    ###.fr     */
 /*                                                         /                  */
 /*                                                        /                   */
 /* ************************************************************************** */
@@ -75,9 +75,9 @@ char			**ft_strsplit(char const *s, char c)
 		nb = ft_count_words(s, c);
 		if (!(tab = (char**)malloc(sizeof(char*) * (nb + 1))))
 			return (NULL);
+		tab[nb] = NULL;
 		if (nb == 0)
 			return (tab);
-		tab[nb] = NULL;
 		return (ft_sort_words(nb, tab, s, c));
 	}
 	return (NULL);
