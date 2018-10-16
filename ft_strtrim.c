@@ -6,7 +6,7 @@
 /*   By: vde-sain <marvin@le-101.fr>                +:+   +:    +:    +:+     */
 /*                                                 #+#   #+    #+    #+#      */
 /*   Created: 2018/10/04 15:39:19 by vde-sain     #+#   ##    ##    #+#       */
-/*   Updated: 2018/10/10 12:11:13 by vde-sain    ###    #+. /#+    ###.fr     */
+/*   Updated: 2018/10/15 18:30:11 by vde-sain    ###    #+. /#+    ###.fr     */
 /*                                                         /                  */
 /*                                                        /                   */
 /* ************************************************************************** */
@@ -34,9 +34,9 @@ char		*ft_strtrim(char const *s)
 		a = 0;
 		b = ft_strlen(s) - 1;
 		c = 0;
-		while (s[a] == ' ' || s[a] == ',' || s[a] == '\n' || s[a] == '\t')
+		while (s[a] == ' ' || s[a] == '\n' || s[a] == '\t')
 			a++;
-		while (s[b] == ' ' || s[b] == ',' || s[b] == '\n' || s[b] == '\t')
+		while (s[b] == ' ' || s[b] == '\n' || s[b] == '\t')
 			b--;
 		if (!(dest = (char*)malloc(sizeof(*dest) * (ft_size(a, b) + 2))))
 			return (NULL);

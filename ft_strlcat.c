@@ -6,14 +6,15 @@
 /*   By: vde-sain <marvin@le-101.fr>                +:+   +:    +:    +:+     */
 /*                                                 #+#   #+    #+    #+#      */
 /*   Created: 2018/10/08 11:37:24 by vde-sain     #+#   ##    ##    #+#       */
-/*   Updated: 2018/10/12 12:58:59 by vde-sain    ###    #+. /#+    ###.fr     */
+/*   Updated: 2018/10/12 13:00:21 by vde-sain    ###    #+. /#+    ###.fr     */
 /*                                                         /                  */
 /*                                                        /                   */
 /* ************************************************************************** */
 
 #include "libft.h"
+#include <stdio.h>
 
-size_t		ft_strlcat(char *dst, const char *src, size_t size)
+size_t			ft_strlcat(char *dst, const char *src, size_t size)
 {
 	size_t	a;
 	size_t	b;

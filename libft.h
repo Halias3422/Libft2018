@@ -6,7 +6,7 @@
 /*   By: vde-sain <marvin@le-101.fr>                +:+   +:    +:    +:+     */
 /*                                                 #+#   #+    #+    #+#      */
 /*   Created: 2018/10/03 17:33:24 by vde-sain     #+#   ##    ##    #+#       */
-/*   Updated: 2018/10/12 13:19:35 by vde-sain    ###    #+. /#+    ###.fr     */
+/*   Updated: 2018/10/12 13:20:23 by vde-sain    ###    #+. /#+    ###.fr     */
 /*                                                         /                  */
 /*                                                        /                   */
 /* ************************************************************************** */
@@ -24,6 +24,10 @@ typedef struct		s_list
 	size_t			content_size;
 	struct s_list	*next;
 }					t_list;
+
+/*
+** PART 1 PROTOTYPES
+*/
 
 void				*ft_memset(void *b, int c, size_t len);
 size_t				ft_strlen(const char *s);
@@ -47,13 +51,17 @@ int					ft_tolower(int c);
 char				*ft_strchr(const char *s, int c);
 char				*ft_strstr(const char *haystack, const char *needle);
 char				*ft_strnstr(const char *haystack, const char *needle,
-					size_t len);
+		size_t len);
 void				*ft_memcpy(void *dst, const void *src, size_t n);
 void				*ft_memccpy(void *dst, const void *src, int c, size_t n);
 void				*ft_memmove(void *dst, const void *src, size_t len);
 void				*ft_memchr(const void *s, int c, size_t n);
 int					ft_memcmp(const void *s1, const void *s2, size_t n);
 char				*ft_strrchr(const char *s, int c);
+
+/*
+** PART 2 PROTOTYPES
+*/
 
 void				ft_putchar(char c);
 void				ft_putstr(char const *s);
@@ -80,12 +88,20 @@ char				**ft_strsplit(char const *s, char c);
 void				ft_strdel(char **as);
 char				*ft_itoa(int n);
 
+/*
+** BONUS PROTOTYPES
+*/
+
 t_list				*ft_lstnew(void const *content, size_t content_size);
 void				ft_lstdelone(t_list **alst, void (*del)(void *, size_t));
 void				ft_lstdel(t_list **alst, void (*del)(void *, size_t));
 void				ft_lstadd(t_list **alst, t_list *new);
 void				ft_lstiter(t_list *lst, void (*f)(t_list *elem));
 t_list				*ft_lstmap(t_list *lst, t_list *(*f)(t_list *elem));
+
+/*
+** EXTRA PROTOTYPES
+*/
 
 void				ft_putnstrn(char *str, int n1, int n2);
 char				*ft_strndup(const char *s1, size_t n);
